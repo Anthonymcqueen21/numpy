@@ -1,5 +1,4 @@
 from __future__ import division, print_function
-
 from os.path import join, split, dirname
 import os
 import sys
@@ -14,8 +13,7 @@ def needs_mingw_ftime_workaround():
     msver = get_msvc_build_version()
     if msver and msver >= 8:
         return True
-
-    return False
+ return False
 
 def configuration(parent_package='',top_path=None):
     from numpy.distutils.misc_util import Configuration, get_mathlibs
